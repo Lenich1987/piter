@@ -3,30 +3,37 @@ html, body{
     height: 100%;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 body{
     background-color: rgb(220, 225, 228);
-    padding: 0 300px;
+    padding: 0 30px;
 }
 
 header{
-    font-family: 'Righteous', cursive;
-    position: relative;
-    color: #3CA1D9; 
-    display: inline-block;
+    text-align: center;
+}
+
+header h1{
+    font-size: 3em;
+    padding: 15px;
     border-top: 5px solid;
     border-bottom: 5px solid;
-    font-size: 3em;
-    padding: 11px 60px;
-    margin: 5; 
-    line-height: 1;
+    color: #3CA1D9;  
 }
 
 main{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 50px;
+    margin-top: 50px;
+}
+
+@media screen and (min-width: 400px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .card{
@@ -41,21 +48,19 @@ main{
 }
 
 .card img{
-    flex: 4;
     width: 100%;
     object-fit: cover;
+    max-height: 75%;
 }
 
 .card .name{
-    flex: 1;
     padding: 0 0px;
     font-size: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-
-    
+    height: 100%;
 }
 
 a{
